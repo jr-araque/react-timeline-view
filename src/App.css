@@ -12,8 +12,10 @@
 }
 
 .App-container {
-  width: 100%;
-  height: calc(100vh - 104px);
+  width: calc(100% - 2rem);
+  height: calc(100vh - 104px - 2rem);
+  padding: 1rem;
+  background-color: lightgray;
 }
 
 .react-calendar-timeline .rct-item.item-weekend {
@@ -21,4 +23,48 @@
   border-color: #29B31A;
 }
 
+.timeline-container {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
 
+.timeline-indicator {
+  order: 1;
+  background-color: darkblue;
+  min-height: 64px;
+}
+
+.timeline-list-wrapper {
+  order: 2;
+  background-color: darkgray;
+  height: calc(100vh - 104px - 2rem - 64px);
+  overflow: scroll;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.driver-list-wrapper {
+  order: 1;
+  background-color: darkorange;
+  min-width: 192px;
+}
+
+.route-timeline-wrapper {
+  order: 2;
+  flex-grow: 1;
+  background-color: darkred;
+  min-height: 100px;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.route-item {
+  height: calc(100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+}
